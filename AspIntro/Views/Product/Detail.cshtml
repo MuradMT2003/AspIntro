@@ -1,4 +1,6 @@
-﻿
+﻿@{
+    var data = ViewBag.Data;
+}
 
 <!DOCTYPE html>
 
@@ -8,5 +10,7 @@
     <title>Detail</title>
 </head>
 <body>
+    <h1>Product Number:@data.Id</h1>
+    <p>Product Name:@data.Name</p>
 </body>
 </html>

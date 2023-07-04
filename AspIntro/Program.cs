@@ -7,5 +7,15 @@ app.MapControllerRoute(
     "default",
     "{controller=home}/{action=index}/{id?}"
     );
+app.MapControllerRoute(
+    "about",
+    pattern:"about-us",
+    defaults:new {controller="home",action="about"}
+    );
+app.MapControllerRoute(
+    "contact",
+    pattern: "contact-us",
+    defaults: new { controller = "home", action = "contact" }
+    );
 
 app.Run();

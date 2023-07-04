@@ -1,4 +1,7 @@
-﻿
+﻿@using AspIntro.Models;
+@{
+    List<Product> list = ViewBag.Products;
+}
 
 
 <!DOCTYPE html>
@@ -9,5 +12,12 @@
     <title>Index</title>
 </head>
 <body>
+    <h1>Products:</h1>
+    <ul>
+        @foreach(var item in list)
+        {
+            <li>@item.Name</li>
+        }
+    </ul>
 </body>
 </html>
